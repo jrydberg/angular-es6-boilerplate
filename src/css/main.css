@@ -1,0 +1,35 @@
+.containerFlexRow {
+	display: flex;
+	flex-direction: row;
+}
+
+.containerFlexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+.floatRight {
+	float: right;
+	margin-left: 10px;
+}
+
+.selected {
+	background-color: #eef;
+}
+
+.feedListItem {
+	padding: 20px;
+	width: 300px;
+	border-bottom: 1px solid #999;
+	float:left;
+}
+
+.currentPost {
+	padding: 20px;
+	border: 1px solid #999;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
