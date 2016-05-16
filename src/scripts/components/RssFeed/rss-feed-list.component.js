@@ -1,15 +1,15 @@
 function RssFeedListCtrl() {
-	var ctrl = this;
+    var ctrl = this;
 
-	ctrl.setCurrent = function(index) {
-		this.currentPost = ctrl.rssFeed[index];
-	};
-} 
+    ctrl.setCurrent = function(index) {
+        this.currentPost = ctrl.rssFeed[index];
+    };
+}
 
 export default {
-	templateUrl: '/scripts/components/RssFeed/RssList.html',
-	controller: RssFeedListCtrl,
-	bindings: {
-		rssFeed: '<'
- 	}	
+    templateUrl: '/scripts/components/RssFeed/RssList.html',
+    controller: RssFeedListCtrl,
+    bindings: {
+        rssFeed: '<'
+     }
 };

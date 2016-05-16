@@ -17,7 +17,7 @@ angular.module('rssApp', [
 });
 
 /*
-  Bootstrap Angular app
+    Bootstrap Angular app
 */
 angular.element(document).ready(function() {
     angular.bootstrap(document, ['rssApp']);

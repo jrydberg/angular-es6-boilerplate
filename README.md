@@ -1,21 +1,21 @@
-# RSS Feed Reader
+# Angular boilerplate with ES6 support
 
-A simple RSS feed reader.
+A simple JSON feed reader.
 
 
 ## Dependencies
 
-1) Install Node.js:
-	a) Download: https://nodejs.org/en/
-	b) Or, better, via nvm: https://github.com/creationix/nvm
-2) Install packages in root folder of the app: `npm i`
+1. Install Node.js:
+    * Download: https://nodejs.org/en/
+    * Or, better, via nvm: https://github.com/creationix/nvm
+2. Install packages in root folder of the app: `npm i`
 
 
 ## Run the development server
 
 Just run the default gulp task:
 
-	# `gulp`
+    # `gulp`
 
 This will transpile and copy the development files from `src` to `build`. The
 app is then available on localhost, port 4242
