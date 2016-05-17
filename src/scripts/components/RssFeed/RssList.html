@@ -1,19 +1,18 @@
 <div class="containerFlexRow">
-
     <div class="feedList containerFlexColumn">
-        <div class="feedListItem" ng-repeat="post in $ctrl.rssFeed" ng-class="($ctrl.currentPost && (post.id === $ctrl.currentPost.id)) ? 'selected' : ''">
-            <a class="floatRight" ng-click="post.toggleFavorite()" href="">
-                <span ng-hide="post.favorite === true"><i class="fa fa-heart-o"></i></span>
-                <span ng-show="post.favorite === true"><i class="fa fa-heart"></i></span>
-            </a>
-            <a ng-click="$ctrl.setCurrent($index)" href="">
+        <div class="feedListItem" *ngFor="let post of rssFeed; let i=index" [ngClass]="{selected: isCurrent(i)}">
+            <div class="floatRight link" (click)="post.toggleFavorite()">
+                <span [hidden]="post.favorite === true"><i class="fa fa-heart-o"></i></span>
+                <span [hidden]="!post.favorite === true"><i class="fa fa-heart"></i></span>
+            </div>
+            <div (click)="setCurrent(i)" class="link">
                 {{ post.title }}
-            </a>
+            </div>
         </div>
     </div>
 
-    <div class="currentPost" ng-show="$ctrl.currentPost">
-        <h2>{{ $ctrl.currentPost.title }}</h2>
-        <p>{{ $ctrl.currentPost.body }}</p>
+    <div class="currentPost" *ngIf="currentPost">
+        <h2>{{ currentPost.title }}</h2>
+        <p>{{ currentPost.body }}</p>
     </div>
 </div>

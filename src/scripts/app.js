@@ -2,9 +2,8 @@
     Import all Angular components via ES6 imports
 */
 import RssFeedModule from './components/RssFeed';
-import { UpgradeAdapter } from '../../node_modules/@angular/upgrade';
-
-const upgradeAdapter = new UpgradeAdapter();
+import upgradeAdapter from './upgrade-adapter';
+import { RssFeedListComponent } from './components/RssFeed/rss-feed-list.component';
 
 /*
     Define main module
@@ -22,7 +21,7 @@ angular.module('rssApp', [
 /*
     Bootstrap Angular app
 */
-upgradeAdapter.bootstrap(document.documentElement, ['rssApp']);
-// angular.element(document).ready(function() {
-//     angular.bootstrap(document, ['rssApp']);
-// });
+console.log(upgradeAdapter);
+angular.element(document).ready(function() {
+    upgradeAdapter.bootstrap(document.body, ['rssApp']);
+});

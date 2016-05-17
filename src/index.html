@@ -9,11 +9,11 @@
 
     <h1>RSS Feed Reader</h1>
 
-    <rss-list rss-feed="feed">
-    </rss-list>
+    <rss-list [rss-feed]="feed"></rss-list>
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/babel-polyfill/dist/polyfill.js"></script>
+    <!-- <script src="node_modules/reflect-metadata/Reflect.js"></script> -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>

@@ -49,14 +49,14 @@ gulp.task('jshint', function() {
 });
 
 // Compile all script files into one output minified JS file.
-gulp.task('scripts', ['jshint'], function() {
+gulp.task('scripts', function() {
 
     var sources = browserify({
         entries: src.scripts.app,
         debug: true // Build source maps
     })
     .transform(babelify.configure({
-        "presets": [ "es2015" ]
+        presets: [ 'es2015', 'angular2' ]
     }));
 
     return sources.bundle()
